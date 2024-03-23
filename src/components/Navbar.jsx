@@ -59,7 +59,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div className="bg-navcolor text-white min-h-[10vh] h-full flex-center">
+    <div className="bg-navcolor text-white min-h-[10vh] flex-center">
       <nav
         className={`flex items-center w-h-100 ${
           windowWidth > 620 ? "justify-evenly gap-3" : "gap-1"
@@ -86,7 +86,9 @@ const Navbar = () => {
               onClick={() => setBoxVisible(!boxVisible)}
               ref={node}
             >
-              <p>{windowWidth > 620 ? "MORE" : "Bestsellers"}</p>
+              <p className={`${windowWidth < 620 ? "pr-2" : ""}`}>
+                {windowWidth > 620 ? "MORE" : "Bestsellers"}
+              </p>
               <img
                 src={imgSrc}
                 width={20}
@@ -99,7 +101,7 @@ const Navbar = () => {
                 }`}
               />
               {boxVisible && (
-                <div className="hover-div absolute top-[3.2rem] bg-navcolor text-white rounded-lg resultant z-50">
+                <div className="hover-div absolute top-[3.2rem] bg-navcolor text-white rounded-lg resultant z-[100000]">
                   {" "}
                   {/* invisible */}
                   {more.map((link) => (
@@ -128,7 +130,7 @@ const Navbar = () => {
           <img src={search} alt="search icon" />
           <input
             type="text"
-            placeholder="Search something"
+            placeholder={windowWidth > 430 ? "Search something" : "Search"}
             className="bg-transparent text-white placeholder:text-white placeholder:font-light focus:outline-none"
           />
         </div>

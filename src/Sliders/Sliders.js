@@ -59,14 +59,14 @@ const Sliders = () => {
       <Slider {...settings}>
         {Products.map((slide, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="pb-0">
               <img
                 src={slide.image}
                 alt="slider"
                 key={index}
                 className="image relative rounded-xl"
               />
-              <p className="text-xs rounded-b-xl opacity-0 text-wrap mx-auto">
+              <p className="text-xs rounded-b-xl opacity-0 w-full text-wrap absolute lg:text-[0.9rem] card-desc">
                 {slide.description}
               </p>
             </div>
