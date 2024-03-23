@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .full-screen {
+    @apply w-screen h-screen;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .w-h-100 {
+    @apply w-[100%] h-[100%];
+  }
+}
