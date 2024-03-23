@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 // import sliderData from "./sliderData";
 
 // component
-import Sliders from "./Sliders";
+import Sliders from "./components/Sliders/Sliders";
 
 export default function App() {
   return (

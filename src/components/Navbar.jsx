@@ -62,11 +62,11 @@ const Navbar = () => {
     <div className="bg-navcolor text-white min-h-[10vh] flex-center">
       <nav
         className={`flex items-center w-h-100 ${
-          windowWidth > 620 ? "justify-evenly gap-3" : "gap-1"
+          windowWidth > 620 ? "justify-evenly gap-3" : ""
         }`}
       >
         <img src={logo} alt="company logo" width={150} height={150} />
-        <div className="flex gap-9 h-full">
+        <div className="flex gap-9 h-full md:gap-0">
           {navLinks.map((link) => (
             <div className="hover:text-[#83CEF9] cursor-pointer">
               {link.title}
@@ -102,8 +102,6 @@ const Navbar = () => {
               />
               {boxVisible && (
                 <div className="hover-div absolute top-[3.2rem] bg-navcolor text-white rounded-lg resultant z-[100000]">
-                  {" "}
-                  {/* invisible */}
                   {more.map((link) => (
                     <div className="hover:bg-white min-w-max hover:text-navcolor p-2 px-3 flex justify-between gap-1 group h-full w-full">
                       <p className="group-hover:font-semibold h-full w-full">

@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import "./Sliders.css";
-import { Products } from "../constants";
+import { Products } from "../../constants";
 
 const Sliders = () => {
   const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
